@@ -1,0 +1,272 @@
+/*
+  style-clone.css
+  This file is a commented companion stylesheet for explaining the project.
+  It keeps the same visual styling structure as the main stylesheet while adding
+  simple, student-friendly comments for each major section.
+*/
+
+/* Import the main font used throughout the website */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Custom font fallback for the Salesforce-style branding */
+@font-face {
+  font-family: 'Salesforce Sans';
+  src: url('https://www.salesforce.com/content/dam/sfdc-docs/www/salesforce-sans/SalesforceSans-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Salesforce Sans';
+  src: url('https://www.salesforce.com/content/dam/sfdc-docs/www/salesforce-sans/SalesforceSans-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* ------------------------ */
+/* Base reset and global rules */
+/* ------------------------ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+:root {
+  --sf-blue: #0176d3;
+  --sf-blue-hover: #014486;
+  --sf-navy: #032d60;
+  --sf-navy-dark: #071536;
+  --sf-green: #2e844a;
+  --sf-green-hover: #1e5a32;
+  --sf-gray-bg: #f3f3f3;
+  --sf-text-main: #181818;
+  --sf-text-muted: #5c5c5c;
+  --sf-border: #d8dde6;
+  --sf-white: #ffffff;
+}
+
+body {
+  background-color: var(--sf-white);
+  color: var(--sf-text-main);
+  font-family: 'Salesforce Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Make images and media responsive */
+img,
+svg,
+video,
+iframe {
+  max-width: 100%;
+}
+
+/* ------------------------ */
+/* Layout containers */
+/* ------------------------ */
+.container,
+.container-fluid,
+.shell-container,
+.narrow-shell {
+  width: min(100%, calc(100% - 1.5rem));
+}
+
+.row > * {
+  min-width: 0;
+}
+
+/* ------------------------ */
+/* Buttons and form controls */
+/* ------------------------ */
+button,
+.btn,
+.form-control,
+.form-select,
+textarea {
+  min-height: 44px;
+}
+
+.form-control,
+.form-select,
+textarea {
+  width: 100%;
+}
+
+button,
+.btn,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ------------------------ */
+/* Card and content styling */
+/* ------------------------ */
+.card,
+.sf-card,
+.content-card,
+.resource-card,
+.cta-panel,
+.next-step-card,
+.resource-card-dark,
+.matrix-card {
+  overflow: hidden;
+}
+
+/* ------------------------ */
+/* Mobile navigation styles */
+/* ------------------------ */
+.mobile-nav-toggle-bar {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--sf-border);
+  background: var(--sf-white);
+  position: sticky;
+  top: 0;
+  z-index: 1035;
+}
+
+.mobile-nav-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--sf-navy);
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.mobile-menu-toggle {
+  position: relative;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  border: 1px solid var(--sf-border);
+  background: var(--sf-white);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu-toggle span {
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--sf-navy);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.mobile-menu-toggle span:nth-child(1) {
+  transform: translateY(-6px);
+}
+
+.mobile-menu-toggle span:nth-child(3) {
+  transform: translateY(6px);
+}
+
+body.mobile-nav-open .mobile-menu-toggle span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+body.mobile-nav-open .mobile-menu-toggle span:nth-child(2) {
+  opacity: 0;
+}
+
+body.mobile-nav-open .mobile-menu-toggle span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.mobile-nav-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(3, 45, 96, 0.32);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+  z-index: 1030;
+}
+
+.mobile-nav-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(92vw, 24rem);
+  height: 100dvh;
+  padding: 1rem;
+  background: var(--sf-white);
+  box-shadow: -12px 0 36px rgba(3, 45, 96, 0.16);
+  transform: translateX(100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.25s ease, opacity 0.25s ease, visibility 0.25s ease;
+  z-index: 1031;
+  overflow-y: auto;
+}
+
+body.mobile-nav-open .mobile-nav-backdrop {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+body.mobile-nav-open .mobile-nav-drawer {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/* ------------------------ */
+/* Responsive behavior */
+/* ------------------------ */
+@media (min-width: 576px) {
+  .container,
+  .container-fluid,
+  .shell-container,
+  .narrow-shell {
+    width: min(100%, calc(100% - 2rem));
+  }
+}
+
+@media (max-width: 991.98px) {
+  .global-nav,
+  .product-nav {
+    display: none !important;
+  }
+
+  .mobile-nav-toggle-bar {
+    display: flex;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .btn,
+  .btn-sf-primary,
+  .btn-sf-outline-blue,
+  .btn-sf-green,
+  .btn-hero-primary,
+  .btn-hero-secondary,
+  .btn-story-light,
+  .btn-story-outline {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .mobile-nav-drawer {
+    width: min(100vw, 24rem);
+  }
+}

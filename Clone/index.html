@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data 360 | Salesforce-Inspired Demo</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-home" data-primary-nav="products" data-sub-nav="overview">
+    <header class="site-header" aria-label="Salesforce site header">
+        <div class="home-alert-bar" role="region" aria-label="Announcement">
+            <div class="shell-container home-alert-inner">
+                <p>Proven advice from Datablazers that will help you fix your messy data, power AI, and drive ROI fast.</p>
+                <a href="learning.html" class="home-alert-link" aria-label="Get the Data 360 playbook">
+                    <span>Get the Playbook</span>
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+
+        <nav class="global-nav d-none d-lg-flex" aria-label="Global navigation">
+            <div class="shell-container global-nav-shell">
+                <a class="site-brand" href="index.html" aria-label="Salesforce Home">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg" alt="Salesforce Home" width="64">
+                </a>
+
+                <div class="global-nav-inner">
+                    <ul class="top-nav-links" role="list">
+                        <li class="premium-nav-item premium-dropdown">
+                            <button class="sf-nav-link premium-nav-link premium-nav-toggle" type="button" data-nav-group="products" aria-label="Open Products menu" aria-controls="productsMenu" aria-expanded="false">
+                                <span>Products</span>
+                                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                            </button>
+                            <div class="premium-dropdown-menu premium-mega-menu" id="productsMenu" role="menu">
+                                <div class="premium-mega-grid">
+                                    <div class="premium-dropdown-column">
+                                        <span class="premium-dropdown-label">Platform</span>
+                                        <a class="premium-dropdown-link" href="products.html">
+                                            <strong>All Products</strong>
+                                            <small>See the full Salesforce portfolio</small>
+                                        </a>
+                                        <a class="premium-dropdown-link" href="products.html">
+                                            <strong>Agentforce</strong>
+                                            <small>Deploy trusted AI agents across your teams</small>
+                                        </a>
+                                        <a class="premium-dropdown-link" href="products.html">
+                                            <strong>Sales Cloud</strong>
+                                            <small>Build pipeline visibility and smarter forecasting</small>
+                                        </a>
+                                        <a class="premium-dropdown-link" href="products.html">
+                                            <strong>Service Cloud</strong>
+                                            <small>Deliver faster support with unified context</small>
+                                        </a>
+                                    </div>
+                                    <div class="premium-dropdown-column">
+                                        <span class="premium-dropdown-label">Data &amp; Intelligence</span>
+                                        <a class="premium-dropdown-link" href="index.html">
+                                            <strong>Data 360</strong>
+                                            <small>Activate trusted enterprise data everywhere</small>
+                                        </a>
+                                        <a class="premium-dropdown-link" href="services.html">
+                                            <strong>Platform</strong>
+                                            <small>Unify automation, integrations, and apps</small>
+                                        </a>
+                                        <a class="premium-dropdown-link" href="products.html">
+                                            <strong>Analytics</strong>
+                                            <small>Turn live signals into decision-ready insight</small>
+                                        </a>
+                                        <a class="premium-dropdown-link" href="support.html">
+                                            <strong>Customer Success</strong>
+                                            <small>Guidance and enablement from planning to scale</small>
+                                        </a>
+                                    </div>
+                                    <div class="premium-feature-card">
+                                        <span class="premium-dropdown-pill">Featured</span>
+                                        <h3>Connect data, workflows, and AI in one operating layer.</h3>
+                                        <p>Bring customer context, real-time orchestration, and agent-ready experiences together without losing speed or trust.</p>
+                                        <a href="products.html" class="premium-card-cta">Explore the portfolio <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="premium-nav-item"><a class="sf-nav-link premium-nav-link" href="industries.html" data-nav-group="industries">Industries</a></li>
+                        <li class="premium-nav-item"><a class="sf-nav-link premium-nav-link" href="use-cases.html" data-nav-group="customers">Customers</a></li>
+                        <li class="premium-nav-item"><button class="sf-nav-link premium-nav-link" type="button" aria-label="View events">Events</button></li>
+                        <li class="premium-nav-item"><a class="sf-nav-link premium-nav-link" href="learning.html" data-nav-group="learning">Learning</a></li>
+                        <li class="premium-nav-item"><a class="sf-nav-link premium-nav-link" href="support.html" data-nav-group="support">Support</a></li>
+                        <li class="premium-nav-item"><a class="sf-nav-link premium-nav-link" href="about.html" data-nav-group="company">Company</a></li>
+                    </ul>
+
+                    <div class="header-actions">
+                        <label class="agentforce-search-container" aria-label="Search Salesforce content">
+                            <i class="fa-solid fa-magnifying-glass search-icon" aria-hidden="true"></i>
+                            <input type="search" class="form-control" placeholder="Ask Agentforce anything" aria-label="Search Salesforce content">
+                        </label>
+                        <a href="contact.html" class="header-utility-link header-contact-link" aria-label="Contact Salesforce">Contact Us</a>
+                        <a href="#" class="header-utility-link header-language-link" aria-label="Select language">
+                            <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                            <span>EN</span>
+                        </a>
+                        <a href="login.html" class="header-login-link" aria-label="Log in to your Salesforce account">
+                            <i class="fa-solid fa-user" aria-hidden="true"></i>
+                            <span>Login</span>
+                        </a>
+                        <a href="contact.html" class="header-cta header-cta-primary" aria-label="Get started with Data 360">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <nav class="product-nav d-none d-lg-block" aria-label="Data 360 navigation">
+            <div class="shell-container product-nav-shell">
+                <div class="product-nav-row">
+                    <a class="product-nav-brand" href="index.html">Data 360</a>
+
+                    <div class="product-nav-links-wrapper">
+                        <a class="product-nav-link" href="index.html" data-subnav="overview">Overview</a>
+                        <a class="product-nav-link" href="about.html" data-subnav="how-it-works">How it Works</a>
+
+                        <div class="product-nav-item premium-dropdown">
+                            <button class="product-nav-link premium-nav-toggle" type="button" data-subnav="solutions" aria-label="Open Solutions menu" aria-controls="solutionsMenu" aria-expanded="false">
+                                <span>Solutions</span>
+                                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                            </button>
+                            <div class="premium-dropdown-menu product-dropdown-menu" id="solutionsMenu" role="menu">
+                                <span class="premium-dropdown-label">Solutions</span>
+                                <a class="premium-dropdown-link" href="services.html">
+                                    <strong>Zero Copy Activation</strong>
+                                    <small>Bring warehouse data into action without duplication</small>
+                                </a>
+                                <a class="premium-dropdown-link" href="services.html">
+                                    <strong>Identity Resolution</strong>
+                                    <small>Unify signals into durable customer profiles</small>
+                                </a>
+                                <a class="premium-dropdown-link" href="dashboard.html">
+                                    <strong>Operational Intelligence</strong>
+                                    <small>Power workflow decisions with live business context</small>
+                                </a>
+                            </div>
+                        </div>
+
+                        <a class="product-nav-link" href="use-cases.html" data-subnav="use-cases">Use Cases</a>
+
+                        <div class="product-nav-item premium-dropdown">
+                            <button class="product-nav-link premium-nav-toggle" type="button" data-subnav="resources" aria-label="Open Resources menu" aria-controls="resourcesMenu" aria-expanded="false">
+                                <span>Resources</span>
+                                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                            </button>
+                            <div class="premium-dropdown-menu product-dropdown-menu" id="resourcesMenu" role="menu">
+                                <span class="premium-dropdown-label">Resources</span>
+                                <a class="premium-dropdown-link" href="learning.html">
+                                    <strong>Playbooks</strong>
+                                    <small>See proven rollout patterns and ROI guidance</small>
+                                </a>
+                                <a class="premium-dropdown-link" href="ai-insights.html">
+                                    <strong>AI Insights</strong>
+                                    <small>Learn how trusted data powers intelligent agents</small>
+                                </a>
+                                <a class="premium-dropdown-link" href="support.html">
+                                    <strong>Documentation</strong>
+                                    <small>Implementation guides, onboarding, and support</small>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="product-nav-item premium-dropdown">
+                            <button class="product-nav-link premium-nav-toggle" type="button" data-subnav="pricing" aria-label="Open Pricing menu" aria-controls="pricingMenu" aria-expanded="false">
+                                <span>Pricing</span>
+                                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                            </button>
+                            <div class="premium-dropdown-menu product-dropdown-menu" id="pricingMenu" role="menu">
+                                <span class="premium-dropdown-label">Pricing</span>
+                                <a class="premium-dropdown-link" href="contact.html">
+                                    <strong>Talk to Sales</strong>
+                                    <small>Get tailored pricing for your business and data footprint</small>
+                                </a>
+                                <a class="premium-dropdown-link" href="contact.html">
+                                    <strong>Implementation Planning</strong>
+                                    <small>Estimate onboarding scope and team readiness</small>
+                                </a>
+                                <a class="premium-dropdown-link" href="learning.html">
+                                    <strong>ROI Playbook</strong>
+                                    <small>See how high-growth teams plan for value faster</small>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="contact.html" class="product-nav-cta" aria-label="Talk to a Data 360 expert">Talk to an Expert</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="premium-mobile-bar d-lg-none" aria-label="Mobile navigation bar">
+            <div class="shell-container premium-mobile-bar-inner">
+                <a class="mobile-site-brand" href="index.html" aria-label="Salesforce Home">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg" alt="Salesforce Home" width="48">
+                    <span>Data 360</span>
+                </a>
+                <div class="mobile-bar-actions">
+                    <a href="contact.html" class="mobile-started-pill" aria-label="Get started with Data 360">Get Started</a>
+                    <button class="mobile-menu-toggle" type="button" aria-controls="mobileNavDrawer" aria-expanded="false" aria-label="Toggle navigation menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile-nav-backdrop d-lg-none" aria-hidden="true"></div>
+
+        <aside class="mobile-nav-drawer d-lg-none" id="mobileNavDrawer" aria-label="Mobile navigation drawer" aria-hidden="true">
+            <div class="mobile-drawer-shell">
+                <div class="mobile-drawer-top">
+                    <span class="mobile-drawer-eyebrow">Navigate</span>
+                    <h2>Explore Data 360</h2>
+                    <p>Browse products, resources, and ways to connect with the Salesforce team from one focused menu.</p>
+                </div>
+
+                <label class="agentforce-search-container mobile-search-container" aria-label="Search Salesforce content">
+                    <i class="fa-solid fa-magnifying-glass search-icon" aria-hidden="true"></i>
+                    <input type="search" class="form-control" placeholder="Search Data 360" aria-label="Search Data 360">
+                </label>
+
+                <div class="mobile-nav-section">
+                    <span class="mobile-nav-section-title">Global</span>
+                    <a class="mobile-nav-link" href="products.html">Products</a>
+                    <a class="mobile-nav-link" href="industries.html">Industries</a>
+                    <a class="mobile-nav-link" href="use-cases.html">Customers</a>
+                    <button class="mobile-nav-link" type="button" aria-label="View events">Events</button>
+                    <a class="mobile-nav-link" href="learning.html">Learning</a>
+                    <a class="mobile-nav-link" href="support.html">Support</a>
+                    <a class="mobile-nav-link" href="about.html">Company</a>
+                </div>
+
+                <div class="mobile-nav-section">
+                    <span class="mobile-nav-section-title">Data 360</span>
+                    <a class="mobile-nav-link" href="index.html">Overview</a>
+                    <a class="mobile-nav-link" href="about.html">How it Works</a>
+                    <a class="mobile-nav-link" href="services.html">Solutions</a>
+                    <a class="mobile-nav-link" href="use-cases.html">Use Cases</a>
+                    <a class="mobile-nav-link" href="learning.html">Resources</a>
+                    <a class="mobile-nav-link" href="contact.html">Pricing</a>
+                </div>
+
+                <div class="mobile-nav-actions">
+                    <a href="contact.html" class="header-utility-link mobile-utility-link">Contact Us</a>
+                    <a href="#" class="header-utility-link header-language-link mobile-utility-link" aria-label="Select language">
+                        <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                        <span>English</span>
+                    </a>
+                    <a href="login.html" class="header-login-link mobile-login-link" aria-label="Log in to your Salesforce account">
+                        <i class="fa-solid fa-user" aria-hidden="true"></i>
+                        <span>Login</span>
+                    </a>
+                    <a href="contact.html" class="product-nav-cta mobile-talk-link" aria-label="Talk to a Data 360 expert">Talk to an Expert</a>
+                    <a href="contact.html" class="header-cta header-cta-primary mobile-start-link" aria-label="Get started with Data 360">Get Started</a>
+                </div>
+            </div>
+        </aside>
+    </header>
+
+    <main>
+        <section class="home-hero">
+            <div class="shell-container">
+                <div class="hero-copy text-center fade-in-section">
+                    <p class="hero-eyebrow">Data 360</p>
+                    <h1>Activate Trusted Data Everywhere</h1>
+                    <p class="hero-kicker"><span style="color: #64b5f6; font-weight: 700;">Introducing Data 360</span> – the next evolution of Data Cloud.</p>
+                    <p class="hero-body">Make all your enterprise data ready for action without moving it. Data 360 transforms fragmented data scattered across your enterprise into one, complete view of your business to fuel real-time workflows, better decision making, and more intelligent agents.</p>
+                    <div class="hero-actions">
+                        <a href="contact.html" class="btn btn-hero-primary">Talk to Sales <i class="fas fa-arrow-up-right-from-square"></i></a>
+                        <a href="watch-demo.html" class="btn btn-hero-secondary">Watch the demo</a>
+                    </div>
+                </div>
+
+                <div class="hero-visual fade-in-section">
+                    <img src="https://wp.sfdcdigital.com/en-us/wp-content/uploads/sites/4/2026/04/Overview-Marquee-Diagram_V3.png?w=1024" alt="Data 360 overview architecture diagram" class="hero-architecture-image">
+                </div>
+            </div>
+        </section>
+
+        <section class="story-arc-section">
+            <div class="shell-container story-arc-inner">
+                <div class="story-orb"><span></span></div>
+                <div class="section-heading text-center mx-auto text-white">
+                    <h2>Powering the world&apos;s most data-driven companies</h2>
+                    <a href="use-cases.html" class="btn btn-story-light">See all stories</a>
+                </div>
+                <div class="story-logo-strip">
+                    <span>Indeed</span>
+                    <span>Engine</span>
+                    <span>Pacers Sports &amp; Entertainment</span>
+                    <span>Wyndham Hotels &amp; Resorts</span>
+                    <span>FedEx</span>
+                    <span>UChicago Medicine</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="dark-home-stack">
+            <section class="section-spacing dark-section latest-dark-section">
+                <div class="shell-container">
+                    <div class="section-heading text-center mx-auto text-white">
+                        <h2>Discover the latest from Data 360</h2>
+                        <p>Explore our latest stories, content, and announcements to understand how you can start activating trusted data across your business today.</p>
+                    </div>
+
+                    <div class="dark-card-rail row g-4">
+                        <div class="col-md-6 col-xl-3">
+                            <article class="dark-resource-card fade-in-section">
+                                <div class="dark-resource-media with-image">
+                                    <img src="https://wp.sfdcdigital.com/en-us/wp-content/uploads/sites/4/2026/01/data360_agents_for_data360_16_9-1.png?w=1024" alt="Data 360 playbook feature">
+                                    <span class="dark-pill">Resource</span>
+                                </div>
+                                <div class="dark-resource-copy">
+                                    <h3>The Fast-Start Playbook to Data 360 ROI</h3>
+                                    <p>Download the guide to discover how Data 360 can help you realize ROI fast.</p>
+                                    <a href="learning.html">Get the Playbook</a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="col-md-6 col-xl-3">
+                            <article class="dark-resource-card fade-in-section">
+                                <div class="dark-resource-media with-image">
+                                    <img src="https://wp.sfdcdigital.com/en-us/wp-content/uploads/sites/4/2026/01/data360_cdp_16_9.png" alt="Data 360 marketer keynote feature">
+                                    <span class="dark-pill">Keynote Highlight</span>
+                                    <span class="play-badge"><i class="fas fa-play"></i></span>
+                                </div>
+                                <div class="dark-resource-copy">
+                                    <h3>The world&apos;s #1 CDP for marketers</h3>
+                                    <p>Learn how Data 360 transforms marketing by giving teams better real-time data and personalized performance.</p>
+                                    <a href="ai-insights.html">Watch now</a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="col-md-6 col-xl-3">
+                            <article class="dark-resource-card fade-in-section">
+                                <div class="dark-resource-media with-image logo-frame">
+                                    <img src="https://wp.sfdcdigital.com/en-us/wp-content/uploads/sites/4/2025/10/fedex-logo-eyebrow.png?w=320" alt="FedEx logo">
+                                    <span class="dark-pill">Announcement</span>
+                                </div>
+                                <div class="dark-resource-copy">
+                                    <h3>Deliver privacy-safe collaboration with Clean Rooms</h3>
+                                    <p>Expand audience reach by collaborating safely with partners using protected, governed data exchanges.</p>
+                                    <a href="services.html">Watch the demo</a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="col-md-6 col-xl-3">
+                            <article class="dark-resource-card fade-in-section">
+                                <div class="dark-resource-media with-image">
+                                    <img src="https://wp.sfdcdigital.com/en-us/wp-content/uploads/sites/4/2026/01/data360_snowflake_16_9.png" alt="Zero-copy data activation visual">
+                                    <span class="dark-pill">Keynote Highlight</span>
+                                    <span class="play-badge"><i class="fas fa-play"></i></span>
+                                </div>
+                                <div class="dark-resource-copy">
+                                    <h3>Activate warehouse data without complex duplication</h3>
+                                    <p>Learn how zero-copy patterns speed up personalization, insight activation, and hands-on operational use.</p>
+                                    <a href="services.html">Watch now</a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-spacing dark-section activation-dark-section">
+                <div class="shell-container">
+                    <div class="section-heading text-center mx-auto text-white">
+                        <h2>How Data 360 activates trusted data everywhere</h2>
+                    </div>
+
+                    <article class="activation-panel fade-in-section">
+                        <div class="activation-visual with-image">
+                            <img src="https://wp.sfdcdigital.com/en-us/wp-content/uploads/sites/4/2026/01/right-panel-1.png?w=1020" alt="Audience segment builder interface">
+                        </div>
+                        <div class="activation-copy">
+                            <h3>Drive personalized, real-time experiences.</h3>
+                            <p>Segment and activate your customers with the world&apos;s #1 CDP. Turn unified customer data into targeted, actionable audiences across every channel.</p>
+                            <div class="activation-actions">
+                                <a href="services.html" class="btn btn-story-light">Learn more</a>
+                                <a href="contact.html" class="btn btn-story-outline">Contact us <i class="fas fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="activation-panel reverse fade-in-section">
+                        <div class="activation-visual with-image">
+                            <img src="https://wp.sfdcdigital.com/en-us/wp-content/uploads/sites/4/2026/01/group-2147232082.png?w=1020" alt="Agentforce assistant working with rich customer context">
+                        </div>
+                        <div class="activation-copy">
+                            <h3>Bring context-rich data to Agentforce.</h3>
+                            <p>Power smarter, more trusted agents. Give Agentforce the context and data it needs to act with accuracy and confidence.</p>
+                            <div class="activation-actions">
+                                <a href="ai-insights.html" class="btn btn-story-light">Learn more</a>
+                                <a href="contact.html" class="btn btn-story-outline">Contact us <i class="fas fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="activation-panel fade-in-section">
+                        <div class="activation-visual with-image">
+                            <img src="https://wp.sfdcdigital.com/en-us/wp-content/uploads/sites/4/2026/01/data360_agents_for_data360_16_9.png?w=1024" alt="Connected journey activation visual">
+                        </div>
+                        <div class="activation-copy">
+                            <h3>Activate fully connected customer journeys</h3>
+                            <p>Act on unified data and insights shared across your Customer 360. Every team, from sales to service, is powered by the same comprehensive, real-time view of your customer.</p>
+                            <div class="activation-actions">
+                                <a href="use-cases.html" class="btn btn-story-light">Explore use cases</a>
+                                <a href="contact.html" class="btn btn-story-outline">Contact us <i class="fas fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section-spacing dark-section zero-copy-dark-section">
+                <div class="shell-container">
+                    <div class="section-heading text-center mx-auto text-white">
+                        <h2>Make all your enterprise data ready for action, without moving it</h2>
+                        <p>Enterprise data holds massive potential, but it&apos;s often hard to activate. With Zero-Copy integrations, Data 360 connects directly to platforms like Snowflake and Databricks with no duplication and no delays.</p>
+                    </div>
+
+                    <div class="row g-4 integration-card-row">
+                        <div class="col-md-6 col-xl-4">
+                            <article class="integration-card fade-in-section card-snow">
+                                <span class="integration-badge">Data 360 for</span>
+                                <h3>Snowflake</h3>
+                                <p>Use Zero Copy to activate Snowflake data in Data 360.</p>
+                                <a href="services.html">Learn more</a>
+                            </article>
+                        </div>
+                        <div class="col-md-6 col-xl-4">
+                            <article class="integration-card fade-in-section card-brick">
+                                <span class="integration-badge">Data 360 for</span>
+                                <h3>Databricks</h3>
+                                <p>Activate your Databricks data via Zero-Copy Delta Sharing.</p>
+                                <a href="services.html">Learn more</a>
+                            </article>
+                        </div>
+                        <div class="col-md-6 col-xl-4">
+                            <article class="integration-card fade-in-section card-query">
+                                <span class="integration-badge">Data 360 for</span>
+                                <h3>Big Query</h3>
+                                <p>Connect Data 360 to your Google BigQuery warehouse via Zero-Copy.</p>
+                                <a href="services.html">Learn more</a>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-spacing dark-section capability-matrix-section">
+                <div class="shell-container">
+                    <div class="section-heading text-center mx-auto text-white">
+                        <h2>Explore Data 360&apos;s capabilities and features</h2>
+                    </div>
+
+                    <div class="capability-group fade-in-section">
+                        <div class="capability-group-label">Connect</div>
+                        <div class="capability-group-cards">
+                            <article class="matrix-card">
+                                <h3>Zero copy integration</h3>
+                                <p>Connect directly to warehouse and lake data without duplication-heavy ETL pipelines.</p>
+                            </article>
+                            <article class="matrix-card">
+                                <h3>Structured &amp; unstructured data</h3>
+                                <p>Bring records, text, images, and streaming events into one activation-ready foundation.</p>
+                            </article>
+                            <article class="matrix-card">
+                                <h3>200+ connectors</h3>
+                                <p>Connect cloud apps, storage systems, and operational data sources through reusable integrations.</p>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="capability-group fade-in-section">
+                        <div class="capability-group-label">Harmonize</div>
+                        <div class="capability-group-cards">
+                            <article class="matrix-card">
+                                <h3>Identity resolution</h3>
+                                <p>Unify fragmented customer identifiers into one trusted profile that can power every team.</p>
+                            </article>
+                            <article class="matrix-card">
+                                <h3>Data prep &amp; transformations</h3>
+                                <p>Clean, reshape, enrich, and prepare data for activation with guided transformation flows.</p>
+                            </article>
+                            <article class="matrix-card">
+                                <h3>Unified data model</h3>
+                                <p>Map disconnected source data into a consistent operating model that scales across the platform.</p>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="capability-group fade-in-section">
+                        <div class="capability-group-label">Govern</div>
+                        <div class="capability-group-cards">
+                            <article class="matrix-card">
+                                <h3>Policy-based governance</h3>
+                                <p>Apply usage policies, consent controls, and cross-team guardrails directly within activation flows.</p>
+                            </article>
+                            <article class="matrix-card">
+                                <h3>AI tagging &amp; classification</h3>
+                                <p>Detect sensitive content and automate the controls needed for safer assistant and workflow usage.</p>
+                            </article>
+                            <article class="matrix-card">
+                                <h3>Private connectivity</h3>
+                                <p>Keep high-value data routes secure with connection patterns designed for enterprise trust.</p>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="capability-group fade-in-section">
+                        <div class="capability-group-label">Activate</div>
+                        <div class="capability-group-cards">
+                            <article class="matrix-card">
+                                <h3>Triggered flows</h3>
+                                <p>Launch real-time workflows when data changes, thresholds move, or key operating signals appear.</p>
+                            </article>
+                            <article class="matrix-card">
+                                <h3>Segments</h3>
+                                <p>Create adaptive audience definitions that stay current as behavior and profile signals evolve.</p>
+                            </article>
+                            <article class="matrix-card">
+                                <h3>Insights &amp; predictive models</h3>
+                                <p>Turn connected data into scores, metrics, and next-best actions that teams can use immediately.</p>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="capability-group fade-in-section">
+                        <div class="capability-group-label">Data Sharing</div>
+                        <div class="capability-group-cards">
+                            <article class="matrix-card">
+                                <h3>Data lakes &amp; warehouses</h3>
+                                <p>Work with shared profile data, segments, and insights directly inside modern cloud data stores.</p>
+                            </article>
+                            <article class="matrix-card">
+                                <h3>Business applications</h3>
+                                <p>Push connected context into downstream operating tools that teams use every day.</p>
+                            </article>
+                            <article class="matrix-card">
+                                <h3>Advertising platforms</h3>
+                                <p>Deliver governed segments and activation outputs to ad channels with more precision and control.</p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-spacing dark-section analyst-section">
+                <div class="shell-container">
+                    <div class="analyst-panel fade-in-section">
+                        <div class="analyst-media">
+                            <img src="https://wp.sfdcdigital.com/en-us/wp-content/uploads/sites/4/2026/01/gartner25-web-featimage-930x620-2x.png?w=1024" alt="Gartner customer data platforms report visual">
+                        </div>
+                        <div class="analyst-copy">
+                            <h2>Gartner names Salesforce a leader in Customer Data Platforms for the third year in a row.</h2>
+                            <p>Learn why Gartner named Salesforce a Leader.</p>
+                            <a href="learning.html" class="btn btn-sf-primary">Read the report <i class="fas fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-spacing dark-section community-section-dark">
+                <div class="shell-container">
+                    <div class="community-panel-dark fade-in-section">
+                        <div class="community-copy-dark">
+                            <h2>Join the Datablazer Community.</h2>
+                            <p>Tap into a network of Data 360 experts and enthusiasts. The Datablazer Community is where passionate professionals learn, connect, and innovate using data and AI across their enterprise.</p>
+                            <a href="learning.html" class="btn btn-sf-primary">Join now</a>
+                        </div>
+                        <div class="community-visual-dark">
+                            <img src="https://wp.sfdcdigital.com/en-us/wp-content/uploads/sites/4/2026/01/Datablazer_720x720_V3.png?w=1024" alt="Datablazer community visual">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-spacing dark-section next-step-dark-section">
+                <div class="shell-container">
+                    <div class="section-heading text-center mx-auto text-white">
+                        <h2>Ready to take the next step with Data 360?</h2>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <article class="next-step-card fade-in-section">
+                                <span class="next-step-icon"><img src="https://www.salesforce.com/content/dam/web/en_us/www/images/data/call.svg" alt=""></span>
+                                <h3>Talk to an expert.</h3>
+                                <p>Tell us a bit more so the right person can reach out faster.</p>
+                                <a href="contact.html">Request a call <i class="fas fa-arrow-up-right-from-square"></i></a>
+                            </article>
+                        </div>
+                        <div class="col-lg-6">
+                            <article class="next-step-card fade-in-section">
+                                <span class="next-step-icon"><img src="https://www.salesforce.com/content/dam/web/en_us/www/images/data/screen.svg" alt=""></span>
+                                <h3>Get started.</h3>
+                                <p>Activate Data 360 for your team today.</p>
+                                <a href="contact.html">Learn more</a>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-spacing dark-section resources-dark-section">
+                <div class="shell-container">
+                    <div class="section-heading text-center mx-auto text-white">
+                        <h2>Get the most of our Data 360 with these resources.</h2>
+                        <a href="use-cases.html" class="btn btn-sf-primary resources-more-btn">See more resources</a>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="col-md-6 col-xl-3">
+                            <article class="resource-card-dark fade-in-section">
+                                <div class="resource-card-media">
+                                    <img src="https://wp.sfdcdigital.com/en-us/wp-content/uploads/sites/4/2026/01/data360_agents_for_data360_16_9.png?w=1024" alt="Enterprise data and trusted context resource">
+                                </div>
+                                <div class="resource-card-copy">
+                                    <h3>Salesforce &amp; Informatica: Combining enterprise data with trusted context to bring your AI to life.</h3>
+                                    <a href="ai-insights.html">Learn more</a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-md-6 col-xl-3">
+                            <article class="resource-card-dark fade-in-section">
+                                <div class="resource-card-media">
+                                    <img src="https://wp.sfdcdigital.com/en-us/wp-content/uploads/sites/4/2026/01/data360_agents_for_data360_16_9-1.png?w=1024" alt="Agentforce builder resource">
+                                </div>
+                                <div class="resource-card-copy">
+                                    <h3>Turn ideas into a business. Build, scale and monetize on an AI native foundation with Agentforce 360.</h3>
+                                    <a href="services.html">Build the Future of AI</a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-md-6 col-xl-3">
+                            <article class="resource-card-dark fade-in-section">
+                                <div class="resource-card-media">
+                                    <img src="https://d3nqfz2gm66yqg.cloudfront.net/images/20250721075703/Data-Cloud-Governance-Updated.png" alt="Data Cloud governance resource">
+                                </div>
+                                <div class="resource-card-copy">
+                                    <h3>Data 360 Governance: Protecting Your Data in the Agentic Landscape</h3>
+                                    <a href="support.html">Learn to Protect Your Data</a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-md-6 col-xl-3">
+                            <article class="resource-card-dark fade-in-section">
+                                <div class="resource-card-media">
+                                    <img src="https://wp.sfdcdigital.com/en-us/wp-content/uploads/sites/4/2026/01/data360_intelligent_context_16_9.png?w=1024" alt="Unstructured data guide resource">
+                                </div>
+                                <div class="resource-card-copy">
+                                    <h3>Agentic AI Depends on Unstructured Data</h3>
+                                    <a href="learning.html">Unstructured Data Guide</a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-spacing dark-section faq-dark-section">
+                <div class="shell-container narrow-shell">
+                    <div class="section-heading text-center mx-auto text-white">
+                        <h2>Frequently asked questions</h2>
+                    </div>
+
+                    <div class="accordion sf-accordion faq-dark-accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true">
+                                    What is Data 360?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Data 360 acts as a trusted activation layer that unifies fragmented enterprise data into live profiles, workflow signals, and decision-ready context for teams across the business.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    What does a connected data layer help teams do?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    It helps teams personalize journeys, improve reporting, power real-time workflows, and support assistants with richer, more trustworthy operating context.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    What kinds of data can be connected?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Teams can work with CRM data, warehouse records, web behavior, service events, unstructured content, and operational app signals through reusable connectors and governed flows.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                                    How does zero-copy activation help?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Zero-copy approaches reduce duplication-heavy pipelines, keep data closer to its source, and make it easier to activate trusted context across customer-facing workflows.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                                    How can teams get started?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Start with one high-value use case such as audience activation, journey orchestration, or assistant context, then expand into connected governance and cross-team workflows.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
+                                    Is this page ready to extend to the rest of the site?
+                                </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes. The homepage now uses a stronger shared product layout language that can be carried into the remaining pages for a more consistent clone.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="shell-container">
+            <div class="row g-4 footer-top">
+                <div class="col-lg-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg" alt="Salesforce logo" class="footer-logo">
+                    <p class="footer-lead">A Salesforce-inspired front-end study focused on layout fidelity, component structure, and responsive polish rather than proprietary asset reuse.</p>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h3>Product</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Overview</a></li>
+                        <li><a href="about.html">How it works</a></li>
+                        <li><a href="services.html">Solutions</a></li>
+                        <li><a href="use-cases.html">Use cases</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h3>Resources</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="learning.html">Guides</a></li>
+                        <li><a href="ai-insights.html">AI insights</a></li>
+                        <li><a href="support.html">Documentation</a></li>
+                        <li><a href="dashboard.html">Dashboards</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h3>Company</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="use-cases.html">Stories</a></li>
+                        <li><a href="industries.html">Industries</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h3>Support</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="support.html">Help center</a></li>
+                        <li><a href="contact.html">Request a call</a></li>
+                        <li><a href="support.html#docs">Support plans</a></li>
+                        <li><a href="learning.html">Community</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Front-end recreation study. Brand references remain property of their respective owners.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Legal</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

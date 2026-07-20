@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How it Works | Salesforce Data Cloud Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .timeline-container {
+            position: relative;
+            padding-left: 3rem;
+            border-left: 3px solid var(--sf-blue);
+        }
+        .timeline-step {
+            position: relative;
+            margin-bottom: 3rem;
+        }
+        .timeline-step::before {
+            content: '';
+            position: absolute;
+            left: calc(-3rem - 9px);
+            top: 5px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: var(--sf-white);
+            border: 4px solid var(--sf-blue);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="loader-wrapper">
+        <div class="text-center">
+            <div class="sf-spinner mx-auto mb-3"></div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg" alt="Salesforce Logo" width="80">
+        </div>
+    </div>
+
+    <button id="back-to-top" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+                                <nav class="navbar navbar-expand-lg bg-white border-bottom py-0 global-nav d-none d-lg-flex">
+        <div class="shell-container d-flex align-items-center justify-content-between w-100">
+            <a class="navbar-brand py-2 me-4" href="index.html">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg" alt="Salesforce Home" width="60">
+            </a>
+            <div class="collapse navbar-collapse d-flex align-items-center justify-content-between" id="globalNav">
+                <ul class="navbar-nav fw-bold" style="font-size: 0.9rem; color: #032d60;">
+                    <li class="nav-item dropdown position-static">
+                        <a class="nav-link dropdown-toggle px-3 sf-nav-link" href="#" role="button" data-bs-toggle="dropdown">Products</a>
+                        <div class="dropdown-menu sf-mega-menu border-0 shadow">
+                            <div class="sf-mega-menu-left">
+                                <div class="sf-mega-menu-header">Products</div>
+                                <ul class="sf-mega-menu-links scrollable-menu-list">
+                                    <li><a class="sf-mega-menu-link" href="products.html"><span>All Products</span><i class="fas fa-chevron-right chevron-icon"></i></a></li>
+                                    <li><a class="sf-mega-menu-link" href="products.html"><span>Agentforce</span><i class="fas fa-chevron-right chevron-icon"></i></a></li>
+                                    <li><a class="sf-mega-menu-link" href="products.html"><span>Sales</span><i class="fas fa-chevron-right chevron-icon"></i></a></li>
+                                    <li><a class="sf-mega-menu-link" href="products.html"><span>Service</span><i class="fas fa-chevron-right chevron-icon"></i></a></li>
+                                    <li><a class="sf-mega-menu-link" href="products.html"><span>Marketing</span><i class="fas fa-chevron-right chevron-icon"></i></a></li>
+                                    <li><a class="sf-mega-menu-link" href="products.html"><span>Commerce</span><i class="fas fa-chevron-right chevron-icon"></i></a></li>
+                                    <li><a class="sf-mega-menu-link" href="products.html"><span>Analytics</span><i class="fas fa-chevron-right chevron-icon"></i></a></li>
+                                    <li><a class="sf-mega-menu-link" href="products.html"><span>Slack</span><i class="fas fa-chevron-right chevron-icon"></i></a></li>
+                                    <li><a class="sf-mega-menu-link" href="products.html"><span>CRM</span><i class="fas fa-chevron-right chevron-icon"></i></a></li>
+                                    <li><a class="sf-mega-menu-link" href="products.html"><span>Small Business</span><i class="fas fa-chevron-right chevron-icon"></i></a></li>
+                                    <li><a class="sf-mega-menu-link" href="index.html"><span>Data</span><i class="fas fa-chevron-right chevron-icon"></i></a></li>
+                                    <li><a class="sf-mega-menu-link" href="services.html"><span>Platform</span><i class="fas fa-chevron-right chevron-icon"></i></a></li>
+                                    <li><a class="sf-mega-menu-link" href="services.html"><span>Net Zero</span><i class="fas fa-chevron-right chevron-icon"></i></a></li>
+                                    <li><a class="sf-mega-menu-link" href="support.html"><span>Customer Success</span><i class="fas fa-chevron-right chevron-icon"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="sf-mega-menu-right">
+                                <span class="sf-mega-menu-tag">Discover the portfolio</span>
+                                <h3>Explore our products.</h3>
+                                <p>Bring customer data, workflow automation, and AI-ready experiences into one connected operating layer.</p>
+                                <a href="products.html" class="btn btn-sf-primary align-self-start">See all products</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown position-static">
+                        <a class="nav-link dropdown-toggle px-3 sf-nav-link" href="#" role="button" data-bs-toggle="dropdown">Industries</a>
+                        <div class="dropdown-menu sf-mega-menu border-0 shadow">
+                            <div class="sf-mega-menu-left">
+                                <div class="sf-mega-menu-header">Industries</div>
+                                <ul class="sf-mega-menu-links scrollable-menu-list">
+                                    <li><a class="sf-mega-menu-link" href="industries.html#automotive"><span class="d-flex align-items-center"><span class="link-icon-wrap"><i class="fas fa-car-side"></i></span>Automotive</span><i class="fas fa-chevron-right chevron-icon"></i></a></li>
+                                    <li><a class="sf-mega-menu-link" href="industries.html#communications"><span class="d-flex align-items-center"><span class="link-icon-wrap"><i class="fas fa-tower-broadcast"></i></span>Communications</span><i class="fas fa-chevron-right chevron-icon"></i></a></li>
+                                    <li><a class="sf-mega-menu-link" href="industries.html#construction"><span class="d-flex align-items-center"><span class="link-icon-wrap"><i class="fas fa-building"></i></span>Construction &amp; Real Estate</span><i class="fas fa-chevron-right chevron-icon"></i></a></li>
+                                    <li><a class="sf-mega-menu-link" href="industries.html#retail"><span class="d-flex align-items-center"><span class="link-icon-wrap"><i class="fas fa-basket-shopping"></i></span>Consumer Goods</span><i class="fas fa-chevron-right chevron-icon"></i></a></li>
+                                    <li><a class="sf-mega-menu-link" href="industries.html#education"><span class="d-flex align-items-center"><span class="link-icon-wrap"><i class="fas fa-graduation-cap"></i></span>Education</span><i class="fas fa-chevron-right chevron-icon"></i></a></li>
+                                    <li><a class="sf-mega-menu-link" href="industries.html#energy"><span class="d-flex align-items-center"><span class="link-icon-wrap"><i class="fas fa-bolt-lightning"></i></span>Energy &amp; Utilities</span><i class="fas fa-chevron-right chevron-icon"></i></a></li>
+                                    <li><a class="sf-mega-menu-link" href="industries.html#financial"><span class="d-flex align-items-center"><span class="link-icon-wrap"><i class="fas fa-building-columns"></i></span>Financial Services</span><i class="fas fa-chevron-right chevron-icon"></i></a></li>
+                                    <li><a class="sf-mega-menu-link" href="industries.html#healthcare"><span class="d-flex align-items-center"><span class="link-icon-wrap"><i class="fas fa-heart-pulse"></i></span>Healthcare</span><i class="fas fa-chevron-right chevron-icon"></i></a></li>
+                                    <li><a class="sf-mega-menu-link" href="industries.html#lifesciences"><span class="d-flex align-items-center"><span class="link-icon-wrap"><i class="fas fa-dna"></i></span>Life Sciences</span><i class="fas fa-chevron-right chevron-icon"></i></a></li>
+                                    <li><a class="sf-mega-menu-link" href="industries.html#manufacturing"><span class="d-flex align-items-center"><span class="link-icon-wrap"><i class="fas fa-industry"></i></span>Manufacturing</span><i class="fas fa-chevron-right chevron-icon"></i></a></li>
+                                    <li><a class="sf-mega-menu-link" href="industries.html#media"><span class="d-flex align-items-center"><span class="link-icon-wrap"><i class="fas fa-photo-film"></i></span>Media</span><i class="fas fa-chevron-right chevron-icon"></i></a></li>
+                                    <li><a class="sf-mega-menu-link" href="industries.html#nonprofit"><span class="d-flex align-items-center"><span class="link-icon-wrap"><i class="fas fa-hand-holding-heart"></i></span>Nonprofit</span><i class="fas fa-chevron-right chevron-icon"></i></a></li>
+                                    <li><a class="sf-mega-menu-link" href="industries.html#professional"><span class="d-flex align-items-center"><span class="link-icon-wrap"><i class="fas fa-briefcase"></i></span>Professional Services</span><i class="fas fa-chevron-right chevron-icon"></i></a></li>
+                                    <li><a class="sf-mega-menu-link" href="industries.html#publicsector"><span class="d-flex align-items-center"><span class="link-icon-wrap"><i class="fas fa-landmark"></i></span>Public Sector</span><i class="fas fa-chevron-right chevron-icon"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="sf-mega-menu-right">
+                                <span class="sf-mega-menu-tag">Industry solutions</span>
+                                <h3>Explore Salesforce for industries.</h3>
+                                <p>Use tailored journeys, service models, and data foundations designed around the realities of each market.</p>
+                                <a href="industries.html" class="btn btn-sf-primary align-self-start">See all industries</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle px-3 sf-nav-link" href="#" role="button" data-bs-toggle="dropdown">Customers</a>
+                        <ul class="dropdown-menu sf-dropdown sf-dropdown-panel border-0 shadow-sm">
+                            <li><a class="dropdown-item" href="use-cases.html">Customer stories</a></li>
+                            <li><a class="dropdown-item" href="use-cases.html">Salesforce on Salesforce</a></li>
+                            <li><a class="dropdown-item" href="dashboard.html">Use cases</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link px-3 sf-nav-link" href="#">Events</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle px-3 sf-nav-link" href="#" role="button" data-bs-toggle="dropdown">Learning</a>
+                        <ul class="dropdown-menu sf-dropdown sf-dropdown-panel border-0 shadow-sm">
+                            <li><a class="dropdown-item" href="learning.html">Trailhead Academy</a></li>
+                            <li><a class="dropdown-item" href="learning.html">Credentials</a></li>
+                            <li><a class="dropdown-item" href="learning.html">Developer Center</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle px-3 sf-nav-link" href="#" role="button" data-bs-toggle="dropdown">Support</a>
+                        <ul class="dropdown-menu sf-dropdown sf-dropdown-panel border-0 shadow-sm">
+                            <li><a class="dropdown-item" href="support.html">Help &amp; documentation</a></li>
+                            <li><a class="dropdown-item" href="contact.html">Contact support</a></li>
+                            <li><a class="dropdown-item" href="support.html#docs">Support plans</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link px-3 sf-nav-link" href="about.html">Company</a></li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <div class="agentforce-search-container d-flex align-items-center me-4">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0; color: #7f00ff;">
+                            <circle cx="10" cy="11" r="5.5" stroke="#7f00ff" stroke-width="2.5"/>
+                            <line x1="14" y1="15" x2="20" y2="21" stroke="#7f00ff" stroke-width="2.5" stroke-linecap="round"/>
+                            <path d="M17 4c0 1.5-0.8 2.2-2 2.2 1.2 0 2 0.7 2 2.2 0-1.5 0.8-2.2 2-2.2-1.2 0-2-0.7-2-2.2z" fill="#7f00ff"/>
+                        </svg>
+                        <input type="text" class="form-control py-0" placeholder="Ask Agentforce an...">
+                    </div>
+                    <div class="text-end me-4" style="line-height: 1.2;">
+                        <a href="contact.html" class="text-decoration-underline text-nowrap" style="font-size: 0.85rem; color: #032d60; font-weight: 600;">Contact Us</a>
+                    </div>
+                    <a href="#" class="text-navy me-3 fs-5" style="color: #032d60;"><i class="fa-solid fa-globe"></i></a>
+                    <a href="login.html" class="text-navy me-4 fw-bold text-decoration-none text-nowrap" style="font-size: 0.9rem; color: #032d60;"><i class="fa-solid fa-user me-1"></i> Login</a>
+                    <a href="contact.html" class="btn btn-sf-green px-4 py-2 text-nowrap">Get started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+                                <nav class="product-nav">
+        <div class="shell-container">
+            <div class="product-nav-row">
+                <a class="product-nav-brand" href="index.html">Data 360</a>
+                <div class="product-nav-links-wrapper">
+                    <a class="product-nav-link" href="index.html" data-subnav="overview">Overview</a>
+                    <a class="product-nav-link" href="about.html" data-subnav="how-it-works">How it works <i class="fa-solid fa-chevron-down ms-1" style="font-size: 0.7rem;"></i></a>
+                    <a class="product-nav-link" href="services.html" data-subnav="solutions">Solutions <i class="fa-solid fa-chevron-down ms-1" style="font-size: 0.7rem;"></i></a>
+                    <a class="product-nav-link" href="use-cases.html" data-subnav="use-cases">Use Cases</a>
+                    <a class="product-nav-link" href="learning.html" data-subnav="resources">Resources <i class="fa-solid fa-chevron-down ms-1" style="font-size: 0.7rem;"></i></a>
+                    <a class="product-nav-link" href="contact.html" data-subnav="pricing">Pricing <i class="fa-solid fa-chevron-down ms-1" style="font-size: 0.7rem;"></i></a>
+                </div>
+                <a href="contact.html" class="btn btn-sf-primary product-nav-cta">Talk to an expert</a>
+            </div>
+            <div class="product-nav-mobile d-lg-none">
+                <div class="product-nav-mobile-links">
+                    <a class="product-nav-link" href="index.html" data-subnav="overview">Overview</a>
+                    <a class="product-nav-link" href="about.html" data-subnav="how-it-works">How it works <i class="fa-solid fa-chevron-down ms-1" style="font-size: 0.7rem;"></i></a>
+                    <a class="product-nav-link" href="services.html" data-subnav="solutions">Solutions <i class="fa-solid fa-chevron-down ms-1" style="font-size: 0.7rem;"></i></a>
+                    <a class="product-nav-link" href="use-cases.html" data-subnav="use-cases">Use Cases</a>
+                    <a class="product-nav-link" href="learning.html" data-subnav="resources">Resources <i class="fa-solid fa-chevron-down ms-1" style="font-size: 0.7rem;"></i></a>
+                    <a class="product-nav-link" href="contact.html" data-subnav="pricing">Pricing <i class="fa-solid fa-chevron-down ms-1" style="font-size: 0.7rem;"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="py-5 text-center text-white" style="background: linear-gradient(180deg, #071536 0%, #014486 100%);">
+        <div class="container py-4">
+            <p class="text-info text-uppercase fw-bold mb-2" style="letter-spacing: 1.5px; font-size: 0.9rem;">Architecture & Engine</p>
+            <h1 class="display-4 fw-bold mb-3">How Data Cloud Works</h1>
+            <p class="lead mx-auto text-light" style="max-width: 750px; opacity: 0.9;">
+                Discover how our real-time customer data engine gathers, maps, and harmonizes enterprise pipelines into actionable unified intelligence.
+            </p>
+        </div>
+    </header>
+
+    <section class="py-5 bg-white">
+        <div class="container py-3">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4" style="color: #032d60; font-size: 2.2rem;">What is a Customer Data Platform?</h2>
+                    <p class="text-muted mb-4">
+                        A Customer Data Platform (CDP) is packaged software that creates a persistent, unified customer database accessible to other systems. It gathers behavioral, transactional, and demographic data from multiple offline and online touchpoints, resolving identities into a single record.
+                    </p>
+                    <p class="text-muted mb-4">
+                        Unlike legacy database warehouses, Salesforce Data Cloud delivers real-time processing capabilities, letting business systems execute campaigns, trigger support workflows, or update dashboards instantly when new telemetry occurs.
+                    </p>
+                    <div class="row g-4 mt-2">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center gap-3">
+                                <span class="bg-primary-subtle text-primary p-3 rounded-circle"><i class="fas fa-database fs-4"></i></span>
+                                <div>
+                                    <h6 class="fw-bold mb-0">Persistent Store</h6>
+                                    <small class="text-muted">Structured profiling</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center gap-3">
+                                <span class="bg-primary-subtle text-primary p-3 rounded-circle"><i class="fas fa-bolt fs-4"></i></span>
+                                <div>
+                                    <h6 class="fw-bold mb-0">Real-Time Actions</h6>
+                                    <small class="text-muted">Instant triggers</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg" alt="What is CDP" class="img-fluid rounded-4 shadow border">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light border-top">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold mb-3" style="color: #032d60; font-size: 2.2rem;">The Data Journey</h2>
+                <p class="text-muted mx-auto" style="max-width: 600px;">How Data Cloud connects points across your company step-by-step.</p>
+            </div>
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-8">
+                    <div class="timeline-container">
+                        
+                        <div class="timeline-step fade-in-section">
+                            <h4 class="fw-bold text-dark mb-2">Step 1: Connect & Ingest</h4>
+                            <p class="text-muted">
+                                Bring data in from web logs, mobile interactions, API streams, CRM records, and external clouds (AWS S3, Azure Blob, Snowflake) using native, zero-copy connectors.
+                            </p>
+                        </div>
+
+                        <div class="timeline-step fade-in-section">
+                            <h4 class="fw-bold text-dark mb-2">Step 2: Harmonize</h4>
+                            <p class="text-muted">
+                                Align incoming records against our standard Customer 360 data model. Disparate database tables (like orders, support tickets, web pageviews) are mapped automatically.
+                            </p>
+                        </div>
+
+                        <div class="timeline-step fade-in-section">
+                            <h4 class="fw-bold text-dark mb-2">Step 3: Unify & Resolve</h4>
+                            <p class="text-muted">
+                                Run identity resolution rules to deduplicate records. Connect email addresses, browser cookies, and phone numbers into a single, high-fidelity contact card.
+                            </p>
+                        </div>
+
+                        <div class="timeline-step fade-in-section">
+                            <h4 class="fw-bold text-dark mb-2">Step 4: Analyze & Segment</h4>
+                            <p class="text-muted">
+                                Build real-time calculated insights (e.g. lifetime value, churn risk score) and construct dynamic segment audiences for immediate activation.
+                            </p>
+                        </div>
+
+                        <div class="timeline-step fade-in-section">
+                            <h4 class="fw-bold text-dark mb-2">Step 5: Activate & Empower</h4>
+                            <p class="text-muted">
+                                Stream unified records back into Agentforce AI, marketing execution journeys, Sales dashboards, or advertising ecosystems to personalize every customer touchpoint.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="sf-footer border-top">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-3">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg" alt="Salesforce Logo" class="mb-4" width="70">
+                    <p style="opacity: 0.7;">Unifying customer profiles in real time to fuel smarter experiences, workflows, and AI agents across every corporate cloud.</p>
+                    <div class="mt-4">
+                        <a href="#" class="me-3 fs-5 text-white" style="opacity: 0.7;"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="me-3 fs-5 text-white" style="opacity: 0.7;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-3 fs-5 text-white" style="opacity: 0.7;"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="fs-5 text-white" style="opacity: 0.7;"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2 offset-lg-1">
+                    <h5>Product</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Overview</a></li>
+                        <li><a href="about.html">How it works</a></li>
+                        <li><a href="services.html">Solutions</a></li>
+                        <li><a href="dashboard.html">Use Cases</a></li>
+                        <li><a href="ai-insights.html">Einstein AI</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h5>Solutions</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="services.html">Marketing Cloud</a></li>
+                        <li><a href="services.html">Sales Cloud</a></li>
+                        <li><a href="services.html">Service Cloud</a></li>
+                        <li><a href="services.html">Commerce Cloud</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h5>Company</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html">About Salesforce</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Newsroom</a></li>
+                        <li><a href="#">Trailblazer Stories</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="contact.html">Support</a></li>
+                        <li><a href="contact.html">Sales Inquiry</a></li>
+                        <li><a href="contact.html">Form Request</a></li>
+                        <li><a href="#">Global Offices</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-top border-secondary pt-4 text-center text-md-between d-flex flex-wrap justify-content-between align-items-center" style="opacity: 0.7; font-size: 0.8rem;">
+                <p class="mb-0">&copy; 2026 Salesforce Clone project. Built for study purposes. All brand properties belong to Salesforce.</p>
+                <div class="d-flex gap-3 mt-3 mt-md-0">
+                    <a href="#" class="text-light">Legal</a>
+                    <a href="#" class="text-light">Privacy</a>
+                    <a href="#" class="text-light">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
